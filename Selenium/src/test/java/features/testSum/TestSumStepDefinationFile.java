@@ -7,12 +7,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import utility.UtilityClass;
 
-class TestSumStepDefinationFile
+public class TestSumStepDefinationFile
 {
-  private  TestSumData testDataSum;
-  private UtilityClass utilityClass;
+  public  TestSumData testDataSum;
+  public UtilityClass utilityClass;
   
-   public TestSumStepDefinationFile()
+  public TestSumStepDefinationFile()
   {
     this.testDataSum = new TestSumData();
     this.utilityClass=new UtilityClass();
