@@ -1,4 +1,4 @@
-package features.multiply;
+package cucumberTest.features.multiply;
 
 public class TestMulData {
 private int m,n,output;

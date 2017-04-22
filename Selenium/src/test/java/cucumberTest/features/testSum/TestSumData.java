@@ -1,4 +1,4 @@
-package features.testSum;
+package cucumberTest.features.testSum;
 
 public class TestSumData
 {
