@@ -10,4 +10,10 @@ public class UtilityClass
     {
 		return a+b;
     }
+    
+    public int multiply(int m,int n)
+    {
+    	
+    	return m*n;
+    }
 }
