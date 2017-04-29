@@ -22,11 +22,11 @@ Feature: Testing Sum method of utility Class
   #| 20 | 10 |  3 |
   #|  0 |  1 |  1 |
   #-----------Example of taking the data into collection Object
-  Scenario: Mul two numbers
-    Given Mul_test Data is
-      | a  | b  | result |
-      | 10 | 10 |     20 |
-      | 20 | 10 |     30 |
-      |  0 |  1 |      1 |
-    When Mul two numbers
-    Then verify OP
+  Scenario: verify Sum of two numbers
+    Given Sum_test Data is
+      | TC     | a  | b  | result |
+      | 001_TC | 10 | 10 |     20 |
+      | 002_TC | 20 | 10 |     31 |
+      | 003_TC |  0 |  1 |      1 |
+    When Sum_two numbers
+    #Then Sum_verify OP
