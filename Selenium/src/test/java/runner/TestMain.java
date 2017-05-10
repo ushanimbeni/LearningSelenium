@@ -32,7 +32,7 @@ public class TestMain
 			String moduleName = currentRow.getCell(1).getStringCellValue().trim().toUpperCase();
 			String status=currentRow.getCell(0).getStringCellValue().trim().toUpperCase();
 			switch (moduleName) {
-			case "TESTSUMEXECUTION ":
+			case "TESTSUMEXECUTION":
 				if (status.equals("Y"))
 				{
 					System.out.println("Executing SUM Module");
