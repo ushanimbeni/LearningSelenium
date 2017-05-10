@@ -37,6 +37,7 @@ public class TestMain
 				{
 					System.out.println("Executing SUM Module");
 					jUnitCore.run(TestSumExecution.class);
+					//syso
 				}
 				break;
 			case "TESTMULEXECUTION":
@@ -44,6 +45,7 @@ public class TestMain
 				{
 					System.out.println("Executing Mul Module");
 					jUnitCore.run(TestMulExecution.class);
+					//syso
 				}				
 				break;
 			default:
