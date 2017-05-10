@@ -17,7 +17,7 @@ public class TestMain
 	{
 		JUnitCore jUnitCore = new JUnitCore();
 		HSSFWorkbook workbook = null;
-		String driverFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\Driver.xls";
+		String driverFilePath = System.getProperty("user.dir") + "/src/test/resources/Driver.xls";
 		FileInputStream xlFile = new FileInputStream(driverFilePath);
 		workbook = new HSSFWorkbook(xlFile);
 		HSSFSheet sheet = workbook.getSheetAt(0);

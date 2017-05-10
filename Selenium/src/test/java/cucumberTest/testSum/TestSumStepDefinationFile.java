@@ -22,6 +22,20 @@ public class TestSumStepDefinationFile
 		this.testDataSum = new TestSumData();
 		this.utilityClass = new UtilityClass();
 	}
+	
+	 @cucumber.api.java.Before
+		public void Before()
+		{
+		System.out.println("Executed function Before");
+
+		}
+
+	@cucumber.api.java.After
+	public void After()
+	{
+		System.out.println("Executed function After");
+
+	}
 
 	@Given("^two numbers are (\\d+) and (\\d+)$")
 	public void testData(int arg1, int arg2)

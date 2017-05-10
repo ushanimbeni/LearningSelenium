@@ -19,6 +19,7 @@ public class TestMulStepDefinationFile
 		this.testDataSum = new TestMulData();
 		this.utilityClass = new UtilityClass();
 	}
+  
 
 	@Given("^Mul_test Data is$")
 	public void test_Data_is(List<TestMulData> colltestSumData)
