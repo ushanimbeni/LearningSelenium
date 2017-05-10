@@ -37,7 +37,7 @@ public class TestMain
 				{
 					System.out.println("Executing SUM Module");
 					jUnitCore.run(TestSumExecution.class);
-					//syso
+					//syso1
 				}
 				break;
 			case "TESTMULEXECUTION":
