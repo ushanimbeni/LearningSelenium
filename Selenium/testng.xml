@@ -4,7 +4,7 @@
 <suite name="example suite 1" parallel="classes" thread-count="2" >
   <test name="Regression suite 1" >
     <classes>
-      <class name="cucumberTest.testMul.TestMulExecution"/>
+      <class name="cucumberTest.testMul.TestMulExecution"/> 
       <class name="cucumberTest.testSum.TestSumExecution"/>
     </classes>
  </test>
