@@ -30,6 +30,7 @@ public class TestMulStepDefinationFile
 	@When("^Mul_two numbers$")
 	public void mul_two_numbers()
 	{
+		utilityClass.launchBrowser("http://google.com");
 		for (int k = 0; k <= this.collTestDataSumGlobal.size() - 1; k++)
 		{
 			tcID = this.collTestDataSumGlobal.get(k).gettC();

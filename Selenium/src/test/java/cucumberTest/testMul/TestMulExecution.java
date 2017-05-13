@@ -1,14 +1,11 @@
 package cucumberTest.testMul;
 
-import org.junit.runner.RunWith;
-
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/cucumberTest/testMul/TestMul.feature")
 
-public class TestMulExecution
+public class TestMulExecution extends AbstractTestNGCucumberTests
 {
 	//Hello Mul working branch Hello1  ok
 	//ok
