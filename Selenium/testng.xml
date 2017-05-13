@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="example suite 1" parallel="classes" thread-count="2" >
+  <test name="Regression suite 1" >
+    <classes>
+      <class name="cucumberTest.testMul.TestMulExecution"/>
+      <class name="cucumberTest.testSum.TestSumExecution"/>
+    </classes>
+ </test>
+</suite>

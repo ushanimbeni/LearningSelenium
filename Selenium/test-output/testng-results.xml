@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="example suite 1" duration-ms="9484" started-at="2017-05-13T19:08:27Z" finished-at="2017-05-13T19:08:36Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberTest.testMul.TestMulExecution@56ac3a89]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberTest.testSum.TestSumExecution@27c20538]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Regression suite 1" duration-ms="9484" started-at="2017-05-13T19:08:27Z" finished-at="2017-05-13T19:08:36Z">
+      <class name="cucumberTest.testMul.TestMulExecution">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberTest.testMul.TestMulExecution@56ac3a89]" name="setUpClass" is-config="true" duration-ms="282" started-at="2017-05-13T21:08:27Z" finished-at="2017-05-13T21:08:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberTest.testMul.TestMulExecution@56ac3a89]" name="feature" duration-ms="8697" started-at="2017-05-13T21:08:27Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-05-13T21:08:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testing Sum method of utility Class]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberTest.testMul.TestMulExecution@56ac3a89]" name="tearDownClass" is-config="true" duration-ms="17" started-at="2017-05-13T21:08:36Z" finished-at="2017-05-13T21:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberTest.testMul.TestMulExecution -->
+      <class name="cucumberTest.testSum.TestSumExecution">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberTest.testSum.TestSumExecution@27c20538]" name="setUpClass" is-config="true" duration-ms="292" started-at="2017-05-13T21:08:27Z" finished-at="2017-05-13T21:08:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberTest.testSum.TestSumExecution@27c20538]" name="feature" duration-ms="9071" started-at="2017-05-13T21:08:27Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-05-13T21:08:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testing Sum method of utility Class]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberTest.testSum.TestSumExecution@27c20538]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2017-05-13T21:08:36Z" finished-at="2017-05-13T21:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberTest.testSum.TestSumExecution -->
+    </test> <!-- Regression suite 1 -->
+  </suite> <!-- example suite 1 -->
+</testng-results>
