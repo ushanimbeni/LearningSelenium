@@ -6,3 +6,115 @@
 2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:97 - Passed
 2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:93 - failed
 2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:97 - Passed
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri May 19 22:14:39 CEST 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+</table>
+<br>
+</body></html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri May 19 22:14:39 CEST 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="TestNG-test=Regression suite 1-2 thread">TestNG-test=Regression suite 1-2</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testSum.TestSumStepDefinationFile category">cucumberTest.testSum.TestSumStepDefinationFile</td>
+<td title="Message">opned Rediff browser</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="TestNG-test=Regression suite 1-1 thread">TestNG-test=Regression suite 1-1</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testMul.TestMulStepDefinationFile category">cucumberTest.testMul.TestMulStepDefinationFile</td>
+<td title="Message">Opened Google</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td title="TestNG-test=Regression suite 1-1 thread">TestNG-test=Regression suite 1-1</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testMul.TestMulStepDefinationFile category">cucumberTest.testMul.TestMulStepDefinationFile</td>
+<td title="Message">Passed</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td title="TestNG-test=Regression suite 1-1 thread">TestNG-test=Regression suite 1-1</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testMul.TestMulStepDefinationFile category">cucumberTest.testMul.TestMulStepDefinationFile</td>
+<td title="Message">Passed</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td title="TestNG-test=Regression suite 1-1 thread">TestNG-test=Regression suite 1-1</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testMul.TestMulStepDefinationFile category">cucumberTest.testMul.TestMulStepDefinationFile</td>
+<td title="Message">Failed</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td title="TestNG-test=Regression suite 1-2 thread">TestNG-test=Regression suite 1-2</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testSum.TestSumStepDefinationFile category">cucumberTest.testSum.TestSumStepDefinationFile</td>
+<td title="Message">Passed</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td title="TestNG-test=Regression suite 1-2 thread">TestNG-test=Regression suite 1-2</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testSum.TestSumStepDefinationFile category">cucumberTest.testSum.TestSumStepDefinationFile</td>
+<td title="Message">failed</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td title="TestNG-test=Regression suite 1-2 thread">TestNG-test=Regression suite 1-2</td>
+<td title="Level">INFO</td>
+<td title="cucumberTest.testSum.TestSumStepDefinationFile category">cucumberTest.testSum.TestSumStepDefinationFile</td>
+<td title="Message">Passed</td>
+</tr>
