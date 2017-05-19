@@ -1,5 +1,6 @@
 package cucumberTest.testMul;
 
+import java.io.IOException;
 import java.util.List;
 
 import cucumber.api.java.en.Given;
@@ -28,9 +29,9 @@ public class TestMulStepDefinationFile
 	}
 
 	@When("^Mul_two numbers$")
-	public void mul_two_numbers()
+	public void mul_two_numbers() throws IOException
 	{
-		utilityClass.launchBrowser("http://google.com");
+		utilityClass.launchBrowser(utilityClass.getPropertyValue("urlGoogle"));
 		for (int k = 0; k <= this.collTestDataSumGlobal.size() - 1; k++)
 		{
 			tcID = this.collTestDataSumGlobal.get(k).gettC();

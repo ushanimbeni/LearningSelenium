@@ -1,5 +1,6 @@
 package cucumberTest.testSum;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.junit.Assert;
@@ -64,9 +65,9 @@ public class TestSumStepDefinationFile
 	}
 
 	@When("^Sum_two numbers$")
-	public void add_two_numbers()
+	public void add_two_numbers() throws IOException
 	{
-		utilityClass.launchBrowser("http://rediff.com");
+		utilityClass.launchBrowser(utilityClass.getPropertyValue("urlRediff"));
 		for (int k = 0; k <= this.collTestDataSumGlobal.size() - 1; k++)
 		{
 			tcID = this.collTestDataSumGlobal.get(k).gettC();
