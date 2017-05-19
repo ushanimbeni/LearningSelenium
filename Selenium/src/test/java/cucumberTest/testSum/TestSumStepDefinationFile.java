@@ -67,7 +67,7 @@ public class TestSumStepDefinationFile
 	@When("^Sum_two numbers$")
 	public void add_two_numbers() throws IOException
 	{
-		utilityClass.launchBrowser(utilityClass.getPropertyValue("urlRediff"));
+//		utilityClass.launchBrowser(utilityClass.getPropertyValue("urlRediff"));
 		for (int k = 0; k <= this.collTestDataSumGlobal.size() - 1; k++)
 		{
 			tcID = this.collTestDataSumGlobal.get(k).gettC();
