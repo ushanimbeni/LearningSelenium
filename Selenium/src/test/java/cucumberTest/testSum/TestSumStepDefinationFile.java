@@ -89,11 +89,9 @@ public class TestSumStepDefinationFile
 			}
 			if (errorFlag != 0)
 			{
-				System.out.println(tcID + " -- failed");
 				log.info("failed");
 			} else
 			{
-				System.out.println(tcID + " -- Passed");
 				log.info("Passed");
 			}
 			errorFlag=0;

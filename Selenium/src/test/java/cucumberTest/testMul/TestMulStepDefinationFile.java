@@ -25,6 +25,7 @@ public class TestMulStepDefinationFile {
 		this.testDataSum = new TestMulData();
 		this.utilityClass = new UtilityClass();
 		Properties props = new Properties();
+		System.out.println("hello Mul constructor");
 		String log4jFile = System.getProperty("user.dir") + "/log4j.properties";
 		props.load(new FileInputStream(log4jFile));
 		PropertyConfigurator.configure(props);
@@ -49,10 +50,8 @@ public class TestMulStepDefinationFile {
 				errorFlag = errorFlag + 1;
 			}
 			if (errorFlag != 0) {
-				System.out.println(tcID + " -- failed");
 				log.info("Failed");
 			} else {
-				System.out.println(tcID + " -- Passed");
 				log.info("Passed");
 			}
 			errorFlag = 0;

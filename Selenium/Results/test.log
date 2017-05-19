@@ -118,3 +118,15 @@ Log session start time Fri May 19 22:14:39 CEST 2017<br>
 <td title="cucumberTest.testSum.TestSumStepDefinationFile category">cucumberTest.testSum.TestSumStepDefinationFile</td>
 <td title="Message">Passed</td>
 </tr>
+2017-05-19 22:25:01 INFO  TestMulStepDefinationFile:44 - Opened Google
+2017-05-19 22:25:01 INFO  TestMulStepDefinationFile:57 - Passed
+2017-05-19 22:25:01 INFO  TestMulStepDefinationFile:57 - Passed
+2017-05-19 22:25:01 INFO  TestMulStepDefinationFile:54 - Failed
+2017-05-19 22:25:01 INFO  TestSumStepDefinationFile:81 - opned Rediff browser
+2017-05-19 22:25:01 INFO  TestSumStepDefinationFile:97 - Passed
+2017-05-19 22:25:01 INFO  TestSumStepDefinationFile:93 - failed
+2017-05-19 22:25:01 INFO  TestSumStepDefinationFile:97 - Passed
+2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:44 - Opened Google
+2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:55 - Passed
+2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:55 - Passed
+2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:53 - Failed
