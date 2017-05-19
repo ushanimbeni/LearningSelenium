@@ -1,0 +1,8 @@
+2017-05-19 22:11:47 INFO  TestMulStepDefinationFile:43 - Opened Google
+2017-05-19 22:11:47 INFO  TestMulStepDefinationFile:56 - Passed
+2017-05-19 22:11:47 INFO  TestMulStepDefinationFile:56 - Passed
+2017-05-19 22:11:47 INFO  TestMulStepDefinationFile:53 - Failed
+2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:81 - opned Rediff browser
+2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:97 - Passed
+2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:93 - failed
+2017-05-19 22:11:47 INFO  TestSumStepDefinationFile:97 - Passed

@@ -1,8 +1,12 @@
 package cucumberTest.testSum;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 
 import cucumber.api.java.en.Given;
@@ -17,11 +21,17 @@ public class TestSumStepDefinationFile
 	public List<TestSumData> collTestDataSumGlobal;
 	public int errorFlag = 0;
 	public String tcID = "";
+	private static Logger log;
 
-	public TestSumStepDefinationFile()
+	public TestSumStepDefinationFile() throws Exception
 	{
 		this.testDataSum = new TestSumData();
 		this.utilityClass = new UtilityClass();
+		Properties props = new Properties();
+		String log4jFile = System.getProperty("user.dir") + "/log4j.properties";
+		props.load(new FileInputStream(log4jFile));
+		PropertyConfigurator.configure(props);
+		log = Logger.getLogger(TestSumStepDefinationFile.class);
 	}
 	
 	 @cucumber.api.java.Before
@@ -68,6 +78,7 @@ public class TestSumStepDefinationFile
 	public void add_two_numbers() throws IOException
 	{
 //		utilityClass.launchBrowser(utilityClass.getPropertyValue("urlRediff"));
+		log.info("opned Rediff browser");
 		for (int k = 0; k <= this.collTestDataSumGlobal.size() - 1; k++)
 		{
 			tcID = this.collTestDataSumGlobal.get(k).gettC();
@@ -79,9 +90,11 @@ public class TestSumStepDefinationFile
 			if (errorFlag != 0)
 			{
 				System.out.println(tcID + " -- failed");
+				log.info("failed");
 			} else
 			{
 				System.out.println(tcID + " -- Passed");
+				log.info("Passed");
 			}
 			errorFlag=0;
 		}
