@@ -130,3 +130,7 @@ Log session start time Fri May 19 22:14:39 CEST 2017<br>
 2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:55 - Passed
 2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:55 - Passed
 2017-05-19 22:25:49 INFO  TestMulStepDefinationFile:53 - Failed
+2017-05-19 22:46:55 INFO  TestMulStepDefinationFile:46 - Opened Google
+2017-05-19 22:46:55 INFO  TestMulStepDefinationFile:58 - Passed
+2017-05-19 22:46:55 INFO  TestMulStepDefinationFile:58 - Passed
+2017-05-19 22:46:55 INFO  TestMulStepDefinationFile:55 - Failed
