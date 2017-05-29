@@ -12,6 +12,7 @@ public class TestBase
 		getURL("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
 	}
+	
 	public void selectBrowser(String browser)
 	{
 		if (browser.equalsIgnoreCase("CHROME"))
@@ -29,4 +30,6 @@ public class TestBase
 	{
 		driver.close();
 	}
+	
+	
 }
