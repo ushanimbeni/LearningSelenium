@@ -1,11 +1,13 @@
 package com.test.automation.uiAutomation.testBase;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBase 
 {
 	public WebDriver driver;
+	String chromeDriverPath;
 	public void init()
 	{
 		selectBrowser("CHROME");
@@ -17,7 +19,14 @@ public class TestBase
 	{
 		if (browser.equalsIgnoreCase("CHROME"))
 		{
-			String chromeDriverPath="/Users/usha/Desktop/chromedriver";
+			if (SystemUtils.IS_OS_WINDOWS)
+			{
+				chromeDriverPath=System.getProperty("user.dir") + "\\driver\\chromedriver.exe";
+			}
+			else if (SystemUtils.IS_OS_MAC)
+			{
+				chromeDriverPath="/Users/usha/Desktop/chromedriver";
+			}
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			driver=new ChromeDriver();
 		}
