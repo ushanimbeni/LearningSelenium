@@ -99,6 +99,7 @@ public class HomePage {
 	@FindBy(xpath = "//*[@id='columns']/div[1]/span[2]")
 	WebElement myAccount;
 
+	
 	public HomePage(WebDriver webDriver) {
 		PageFactory.initElements(webDriver, this);
 	}
@@ -114,21 +115,21 @@ public class HomePage {
 		return invalidEmailAddressError.getText();
 	}
 
-	public void registerUser(String firstName,String lastName,String pwd,String address, String city,String postCode,String mobile) {
+	public void registerUser(String email,String firstName,String lastName,String pwd,String address, String city,String postCode,String mobile) {
 		signInButton.click();
-		email1.sendKeys("ush7@gmail.com");
+		email1.sendKeys(email);
 
 		createAccount.click();
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		gender2.click();
 		customer_firstname.sendKeys(firstName);
-		customer_lastname.sendKeys(firstName);
-		passwd.sendKeys(firstName);
+		customer_lastname.sendKeys(lastName);
+		passwd.sendKeys(pwd);
 		address1.sendKeys(address);
 		city1.sendKeys(city);
 		Select dropdown_state = new Select(state1);
