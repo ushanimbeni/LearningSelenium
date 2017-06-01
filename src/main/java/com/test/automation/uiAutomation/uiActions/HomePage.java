@@ -114,7 +114,7 @@ public class HomePage {
 		return invalidEmailAddressError.getText();
 	}
 
-	public void registerUser() {
+	public void registerUser(String firstName,String lastName,String pwd,String address, String city,String postCode,String mobile) {
 		signInButton.click();
 		email1.sendKeys("ush7@gmail.com");
 
@@ -126,17 +126,17 @@ public class HomePage {
 			e.printStackTrace();
 		}
 		gender2.click();
-		customer_firstname.sendKeys("test");
-		customer_lastname.sendKeys("testlast");
-		passwd.sendKeys("rnijag");
-		address1.sendKeys("alnata oslo");
-		city1.sendKeys("oslo");
+		customer_firstname.sendKeys(firstName);
+		customer_lastname.sendKeys(firstName);
+		passwd.sendKeys(firstName);
+		address1.sendKeys(address);
+		city1.sendKeys(city);
 		Select dropdown_state = new Select(state1);
 		dropdown_state.selectByIndex(1);
 		Select dropdown_country = new Select(country);
 		dropdown_country.selectByIndex(1);
-		postcode1.sendKeys("12345");
-		phone_mobile.sendKeys("1234524222");
+		postcode1.sendKeys(postCode);
+		phone_mobile.sendKeys(mobile);
 		submitAccount.click();
 
 		try {
