@@ -13,7 +13,7 @@ import com.test.automation.uiAutomation.uiActions.HomePage;
 
 import utility.ExcelReader;
 
-public class TC002_verfiyResgistration_DataProviderUsingArray extends TestBase 
+public class TC002_verfiyResgistration_DataProviderUsingExcelProvider extends TestBase 
 {
 	ExcelReader excelReader;
 	

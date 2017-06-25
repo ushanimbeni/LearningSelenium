@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.test.automation.uiAutomation.testBase.TestBase;
 import com.test.automation.uiAutomation.uiActions.HomePage;
 
-public class TC003_verfiyResgistration_DataProviderUsingExcel extends TestBase 
+public class TC003_verfiyResgistration_DataProviderUsingArray extends TestBase 
 {
 	@DataProvider
 	public Object[][] ValidDataProvider() {
