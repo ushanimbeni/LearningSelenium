@@ -14,7 +14,7 @@ public class TC001_verifyLoginWithInvalidCredentials extends TestBase{
 	@BeforeTest
 	public void setup() throws Exception
 	{
-		init();
+		init("CHROME","C://help.html");
 	}
 	
 	@Test

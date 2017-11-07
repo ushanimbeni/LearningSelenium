@@ -27,7 +27,7 @@ public class TC002_verfiyResgistration_DataProviderUsingExcelProvider extends Te
 
 	@BeforeMethod
 	public void setUP() {
-		init();
+		init("CHROME","C://help.html");
 	}
 
 	@Test(dataProvider = "ValidDataProvider")

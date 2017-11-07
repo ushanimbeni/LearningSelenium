@@ -26,7 +26,7 @@ public class TC003_verfiyResgistration_DataProviderUsingArray extends TestBase
 
 	@BeforeMethod
 	public void setUP() {
-		init();
+		init("CHROME","C://help.html");
 	}
 
 	@Test(dataProvider = "ValidDataProvider")

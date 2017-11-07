@@ -8,10 +8,11 @@ public class TestBase
 {
 	public WebDriver driver;
 	String chromeDriverPath;
-	public void init()
+	
+	public void init(String browser, String url)
 	{
-		selectBrowser("CHROME");
-		getURL("http://automationpractice.com/index.php");
+		selectBrowser(browser.toUpperCase());
+		getURL(url);
 		driver.manage().window().maximize();
 	}
 	
