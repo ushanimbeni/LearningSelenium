@@ -1,22 +1,22 @@
 package com.test.automation.uiAutomation.testHomePage;
 
-import org.junit.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.test.automation.uiAutomation.testBase.TestBase;
 import com.test.automation.uiAutomation.uiActions.HelpPage;
 
+import reports.ExtentManager;
+
 public class TC004_verifyRegistration extends TestBase
 {
-	ExtentHtmlReporter htmlReporter;
-	ExtentReports extent;
-	ExtentTest logger;
+	ExtentReports extentReports;
+	ExtentTest test;
 
 	@DataProvider
 	public Object[][] ValidDataProvider()
@@ -30,18 +30,7 @@ public class TC004_verifyRegistration extends TestBase
 	public void setUP()
 	{
 		init("CHROME", System.getProperty("user.dir") + "/testData/help.html");
-		// htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")
-		// + "\\target\\rep.html");
-		// extent = new ExtentReports();
-		// extent.attachReporter(htmlReporter);
-		// extent.setSystemInfo("Environment", "SIT");
-		// extent.setSystemInfo("User Name", "Deepak");
-		// htmlReporter.config().setDocumentTitle("Developer Portal automation
-		// Test Report");
-		// htmlReporter.config().setReportName("Developer Portal Automation
-		// Report");
-		// htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		// htmlReporter.config().setTheme(Theme.DARK);
+		extentReports = ExtentManager.getInstance(System.getProperty("user.dir") + "\\Results\\" + "Res.html");
 	}
 
 	@Test(dataProvider = "ValidDataProvider")
@@ -50,20 +39,22 @@ public class TC004_verifyRegistration extends TestBase
 
 		if (execution.equalsIgnoreCase("Y"))
 		{
-			// logger = extent.createTest("AutomationSuite");
+			test = extentReports.startTest("TCID -- " + username);
 			HelpPage helpPage = new HelpPage(driver);
-			
+
 			helpPage.registerUser(username, pwd, cpwd);
+			test.log(LogStatus.INFO, "testing for : " + username);
 			if (helpPage.getValidationMessageForRegistration().equals(expectedResult))
 			{
 				System.out.println("Test case has been passed for user name " + username);
-				Assert.assertEquals(true, true);
+				test.log(LogStatus.PASS, "Success for TC ID : " + username);
 			} else
 			{
 				System.out.println("Test case has been failed for user name " + username);
-				Assert.assertEquals(true, false);
+				test.log(LogStatus.FAIL, "Success for TC ID : " + username);
 			}
-			// extent.removeTest(logger);
+			extentReports.endTest(test);
+			extentReports.flush();
 		}
 	}
 
@@ -71,8 +62,6 @@ public class TC004_verifyRegistration extends TestBase
 	public void endTest()
 	{
 		driver.close();
-
-		// extent.flush();
 	}
 	//
 	// @AfterSuite
