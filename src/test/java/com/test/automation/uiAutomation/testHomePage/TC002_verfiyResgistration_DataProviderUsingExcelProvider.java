@@ -20,14 +20,14 @@ public class TC002_verfiyResgistration_DataProviderUsingExcelProvider extends Te
 	@DataProvider
 	public Object[][] ValidDataProvider() 
 	{
-		excelReader=new ExcelReader(System.getProperty("user.dir") + "/testData/VerifyRegistration.xls");
+		excelReader=new ExcelReader(System.getProperty("user.dir") + "/testData/VerifyRegistration_DNB.xls");
 		Object[][] testObjArray=excelReader.getTestDataForDataprovider();
 		return testObjArray;		
 	}
 
 	@BeforeMethod
 	public void setUP() {
-		init("CHROME","C://help.html");
+		init("CHROME","C://Common//help.html");
 	}
 
 	@Test(dataProvider = "ValidDataProvider")

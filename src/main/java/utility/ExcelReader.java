@@ -43,7 +43,7 @@ public class ExcelReader {
 			for (int m = 0; m <clmnIndexOfanArray; m++) {
 				if (currentRow.getCell(m).getCellTypeEnum().toString().equals("STRING"))
 				{
-					arr[k][m] = currentRow.getCell(m).getStringCellValue().trim().toUpperCase();
+					arr[k][m] = currentRow.getCell(m).getStringCellValue().trim();
 				}
 				else if (currentRow.getCell(m).getCellTypeEnum().toString().equals("NUMERIC"))
 				{
