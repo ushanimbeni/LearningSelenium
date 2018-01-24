@@ -2,9 +2,11 @@ package com.test.automation.uiAutomation.uiActions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.AppiumDriver;
 
@@ -26,11 +28,12 @@ public class LoginScreen {
 		}
 	}
 
-	public void enterDigitsOfPin(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber) {
+	public void enterDigitsOfPin(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber,ExtentTest test) {
 
 		if (os.equalsIgnoreCase("ANDROID")) {
 			if (wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(pin))) != null) {
 				vippsDriver.findElement(By.id(pin)).sendKeys(firstNumber + secondNumber + thirdNumber + fourthNumber);
+				test.log(LogStatus.INFO, "Entered the pin number as " + firstNumber + secondNumber + thirdNumber + fourthNumber);
 			}
 		}
 	}
@@ -39,7 +42,7 @@ public class LoginScreen {
 		if (os.equalsIgnoreCase("ANDROID")) {
 			if (isElementPresent(By.id(okButton))) {
 				vippsDriver.findElement(By.id(okButton)).click();
-				System.out.println("The user is not logged into this device");
+				System.out.println("The user is not logged into this device");				
 			} else {
 				System.out.println("This time push notification did not popsup");
 			}
@@ -47,8 +50,8 @@ public class LoginScreen {
 		}
 	}
 
-	public void enterKey(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber) {
-		enterDigitsOfPin(firstNumber, secondNumber, thirdNumber, fourthNumber);
+	public void enterKey(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber,ExtentTest test) {
+		enterDigitsOfPin(firstNumber, secondNumber, thirdNumber, fourthNumber,test);		
 		// clickOnOkButton();
 	}
 
