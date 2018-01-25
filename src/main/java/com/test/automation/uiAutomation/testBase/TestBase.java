@@ -27,7 +27,7 @@ public class TestBase {
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void initMobileDriver(String appDirectoryPath, String appName, String deviceName,
+	public void initMobileDriver(String appDirectoryPath, String appName, String device,
 			String platformName, String boolNoReset, String appiumServerURL) 
 	{
 		File appDir = new File(appDirectoryPath);
@@ -36,7 +36,7 @@ public class TestBase {
 		capabilities.setCapability("device", platformName);
 
 		// mandatory capabilitiess
-		capabilities.setCapability("deviceName", deviceName);
+		capabilities.setCapability("deviceName", device);
 		capabilities.setCapability("platformName", platformName);
 
 		// other caps
