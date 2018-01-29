@@ -52,7 +52,6 @@ public class TestMain
 			default:
 				break;
 			}
-		}
-		workbook.close();
+		}		
 	}
 }

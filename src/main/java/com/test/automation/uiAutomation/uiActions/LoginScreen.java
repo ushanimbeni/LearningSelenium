@@ -1,5 +1,7 @@
 package com.test.automation.uiAutomation.uiActions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,10 +11,12 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.AppiumDriver;
+import utility.UtilityClass;
 
 public class LoginScreen {
-	private String pin = "";
+	private String propPin = "";
 	private String okButton = "";
+	private String propPinNew="";
 	private AppiumDriver<WebElement> vippsDriver = null;
 	private String os;
 	WebDriverWait wait;
@@ -22,18 +26,30 @@ public class LoginScreen {
 		this.os = os;
 		wait = new WebDriverWait(vippsDriver, 20);
 		if (os.equalsIgnoreCase("ANDROID")) {
-			pin = "no.dnb.vipps:id/ll_parent";
+			propPin = "no.dnb.vipps:id/ll_parent";
 			okButton = "no.dnb.vipps:id/txt_right_button";
+			propPinNew="com.dnb.vipps.android.mock.debug:id/txt_pin_entry";
 
 		}
 	}
 
-	public void enterDigitsOfPin(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber,ExtentTest test) {
+	public void enterDigitsOfPin(String pin,ExtentTest test) throws IOException {
 
 		if (os.equalsIgnoreCase("ANDROID")) {
-			if (wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(pin))) != null) {
-				vippsDriver.findElement(By.id(pin)).sendKeys(firstNumber + secondNumber + thirdNumber + fourthNumber);
-				test.log(LogStatus.INFO, "Entered the pin number as " + firstNumber + secondNumber + thirdNumber + fourthNumber);
+			if (new UtilityClass().getPropertyValue("newApp").equalsIgnoreCase("true"))
+			{
+				if (wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(propPinNew))) != null) {
+					String pinArray[]=new UtilityClass().stringToArray(pin);
+					vippsDriver.findElement(By.id(propPinNew)).sendKeys(pinArray[0] +pinArray[1]+pinArray[2] + pinArray[3] );
+					test.log(LogStatus.INFO, "Entered the pin number as " + pin);					
+				}
+			}
+			else 				
+			if (wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(propPin))) != null) {
+				String pinArray[]=new UtilityClass().stringToArray(pin);
+				vippsDriver.findElement(By.id(propPin)).sendKeys(pinArray[0] +pinArray[1]+pinArray[2] + pinArray[3] );
+				test.log(LogStatus.INFO, "Entered the pin number as " + pin);
+				System.out.println("2");
 			}
 		}
 	}
@@ -50,8 +66,8 @@ public class LoginScreen {
 		}
 	}
 
-	public void enterKey(String firstNumber, String secondNumber, String thirdNumber, String fourthNumber,ExtentTest test) {
-		enterDigitsOfPin(firstNumber, secondNumber, thirdNumber, fourthNumber,test);		
+	public void enterKey(String pin,ExtentTest test) throws IOException {
+		enterDigitsOfPin(pin,test);		
 		// clickOnOkButton();
 	}
 

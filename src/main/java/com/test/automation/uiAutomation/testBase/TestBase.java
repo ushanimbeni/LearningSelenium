@@ -1,8 +1,13 @@
 package com.test.automation.uiAutomation.testBase;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Properties;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +16,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestBase {
@@ -28,20 +32,20 @@ public class TestBase {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void initMobileDriver(String appDirectoryPath, String appName, String device,
-			String platformName, String boolNoReset, String appiumServerURL) 
+			String platformName, String NoReset, String appiumServerURL) 
 	{
 		File appDir = new File(appDirectoryPath);
 		File app = new File(appDir, appName);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("device", platformName);
 
-		// mandatory capabilitiess
+		// mandatory capabilities
 		capabilities.setCapability("deviceName", device);
 		capabilities.setCapability("platformName", platformName);
 
 		// other caps
 		capabilities.setCapability("app", app.getAbsolutePath());
-		capabilities.setCapability("noReset", boolNoReset);
+		capabilities.setCapability("noReset", NoReset);
 		try {
 			vippsDriver = new AndroidDriver(new URL(appiumServerURL), capabilities);
 			os=platformName;
@@ -69,5 +73,4 @@ public class TestBase {
 	public void closeBrowser() {
 		driver.close();
 	}
-
 }

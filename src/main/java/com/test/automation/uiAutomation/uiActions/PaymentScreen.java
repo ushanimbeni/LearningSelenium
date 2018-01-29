@@ -22,6 +22,7 @@ public class PaymentScreen extends TestBase {
 	private String propPaymentSendBtn = "";
 	private String propCustomMessage="";
 	private String propTxnMessage="";
+	private String propVippsAFriendBtnNew = "";
 	private AppiumDriver<WebElement> vippsDriver = null;
 	private String os;
 	private WebDriverWait wait;
@@ -38,7 +39,8 @@ public class PaymentScreen extends TestBase {
 			this.propNextButton = "no.dnb.vipps:id/open_settings_icon";
 			this.propPaymentSendBtn = "no.dnb.vipps:id/btnSendpayment";
 			this.propCustomMessage="no.dnb.vipps:id/custom_message_input";
-			this.propTxnMessage="no.dnb.vipps:id/message_text"; 
+			this.propTxnMessage="no.dnb.vipps:id/message_text";
+			this.propVippsAFriendBtnNew="com.dnb.vipps.android.mock.debug:id/button";
 		}
 	}
 

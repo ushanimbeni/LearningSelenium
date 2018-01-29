@@ -16,6 +16,7 @@ public class ReceiptScreen {
 	private String receiptTxnMessage="";
 	private String receiptTxnDate="";
 	private String receiptTxnID="";
+	private String receiptBackicon="";
 	
 	private AppiumDriver<WebElement> vippsDriver = null;
 	private String os;
@@ -29,7 +30,8 @@ public class ReceiptScreen {
 			this.receiptPaymentStatus="no.dnb.vipps:id/txtPaymentStatus";
 			this.receiptTxnMessage="no.dnb.vipps:id/txtMerchantMsg";
 			this.receiptTxnDate="no.dnb.vipps:id/date";
-			this.receiptTxnID="no.dnb.vipps:id/serialNumber";			
+			this.receiptTxnID="no.dnb.vipps:id/serialNumber";
+			this.receiptBackicon="no.dnb.vipps:id/go_back_icon";
 		}
 	}
 	
@@ -50,5 +52,11 @@ public class ReceiptScreen {
 			}
 		}
 		return false;		
+	}
+	
+	public void clickOnBackButton()
+	{
+		MobileElement backbtn=(MobileElement) vippsDriver.findElement(By.id(receiptBackicon));
+		backbtn.click();
 	}
 }

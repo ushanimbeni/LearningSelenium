@@ -45,7 +45,16 @@ public class UtilityClass {
 		prop.load(input);
 		// get the property value and print it out
 		return prop.getProperty(propertyNameVariabe);
-
+	}
+	public String [] stringToArray(String str)
+	{
+		String tmp= str;
+		String a[] = new String[tmp.length()];
+		for (int i = 0; i < a.length; i++)
+		{
+			a[i] = tmp.substring(i, i + 1);
+		}		
+		return a;
 	}
 
 }
